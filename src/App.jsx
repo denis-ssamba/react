@@ -3,10 +3,22 @@ import './App.css';
 import Parent from './Components/Parent';
 import Child from './Components/Child';
 import Task from './Components/Task';
-
+import NavBar from './Components/NavBar'
+import { BrowserRouter as Router,Routes,Route, BrowserRouter } from 'react-router-dom';
+import Home from './Components/Home';
+import About from './Components/About';
+import Contact from './Components/Contact';
 
 function App() {
-    return <Task/>
+ return <BrowserRouter >
+    <Routes>
+        <Route path='/home' element={<Home/>}/>
+        <Route path="about-us" element={<About/>}/>
+        <Route path="contact" element={<Contact/>}/>
+        <Route path="task" element={<Task/>}/>
+    </Routes>
+ </BrowserRouter >
+
 }
 
 export default App;
