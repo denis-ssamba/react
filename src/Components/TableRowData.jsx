@@ -1,12 +1,20 @@
-const TableRowData = ({id,title,completed})=>{
-    //const {id,name,completed } = dataRow
+import { Link } from "react-router-dom";
 
-    return <tr key={id}>
-    <td>{id }</td><td>{title}</td> <td>{completed  ?'✅' : '❌' }</td>
-</tr>
-}
+const TableRowData = ({ id, title, completed }) => {
+  //const {id,name,completed } = dataRow
 
-export default TableRowData
+  return (
+    <tr key={id}>
+      <td>{id}</td>
+      <td>{title}</td> <td>{completed ? "✅" : "❌"}</td>
+      <td>
+        <Link to={"/task/" + id}> View Task</Link>
+      </td>
+    </tr>
+  );
+};
+
+export default TableRowData;
 
 //== or ===
-// conditional operator ? : 
+// conditional operator ? :

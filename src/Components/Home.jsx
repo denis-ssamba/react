@@ -1,6 +1,15 @@
-const Home = ()=>{
+import React, { useContext } from "react";
+import { SharedData } from "..";
 
-    return <h1> This is a home page</h1>
-}
+const Home = ({ data }) => {
+  const sData = useContext(SharedData);
+  return (
+    <h1>
+      This is a home page
+      {sData}
+    </h1>
+  );
+};
 
-export default Home
+export default Home;
+// props drilling

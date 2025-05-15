@@ -1,8 +1,10 @@
-const TableHeader = ()=>{
+const TableHeader = () => {
+  return (
+    <tr>
+      <th>Task Id</th> <th>Task name</th> <th>Task Status</th>
+      <th>View Task</th>
+    </tr>
+  );
+};
 
-return <tr>
-<th>Task Id</th> <th>Task name</th> <th>Task Status</th>
-</tr>
-}
-
-export default TableHeader
+export default TableHeader;
